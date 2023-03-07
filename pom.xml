@@ -125,7 +125,20 @@
                 </dependencies>
             </plugin>
         </plugins>
+    <extensions>
+        <extension>
+            <groupId>org.apache.maven.wagon</groupId>
+            <artifactId>wagon-ssh</artifactId>
+            <version>3.5.3</version>
+        </extension>
+    </extensions>
     </build>
+    <distributionManagement>
+        <site>
+            <id>shrek</id>
+            <url>scp://nyszilveszter@shrek.unideb.hu:2222/home/nyszilveszter/public_html/${project.artifactId}</url>
+        </site>
+    </distributionManagement>
     <reporting>
         <plugins>
             <plugin>
